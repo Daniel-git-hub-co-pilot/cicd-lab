@@ -94,8 +94,8 @@ jobs:
           context: ./backend
           push: ${{ github.event_name == 'push' }}
           tags: |
-            ghcr.io/mdanielprashanth/ci-cd-backend:latest
-            ghcr.io/mdanielprashanth/ci-cd-backend:sha-${{ github.sha }}
+            ghcr.io/daniel-git-hub-co-pilot/cicd-lab-backend:latest
+            ghcr.io/daniel-git-hub-co-pilot/cicd-lab-backend:sha-${{ github.sha }}
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v6
@@ -103,6 +103,6 @@ jobs:
           context: ./frontend
           push: ${{ github.event_name == 'push' }}
           tags: |
-            ghcr.io/mdanielprashanth/ci-cd-frontend:latest
-            ghcr.io/mdanielprashanth/ci-cd-frontend:sha-${{ github.sha }}
+            ghcr.io/daniel-git-hub-co-pilot/cicd-lab-frontend:latest
+            ghcr.io/daniel-git-hub-co-pilot/cicd-lab-frontend:sha-${{ github.sha }}
 
